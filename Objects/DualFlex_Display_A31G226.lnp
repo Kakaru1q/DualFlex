@@ -1,0 +1,24 @@
+--cpu Cortex-M0+
+".\objects\main.o"
+".\objects\init.o"
+".\objects\ledcontrol.o"
+".\objects\isr.o"
+".\objects\globalvalue.o"
+".\objects\touch.o"
+".\objects\uart.o"
+".\objects\display.o"
+".\objects\startup_a31g22x.o"
+".\objects\system_a31g22x.o"
+".\objects\a31g22x_hal_scu.o"
+".\objects\a31g22x_hal_i2c.o"
+".\objects\a31g22x_hal_uartn.o"
+".\objects\debug.o"
+".\objects\debug_cmd.o"
+".\objects\debug_frmwrk.o"
+".\objects\a31g22x_hal_pcu.o"
+".\objects\a31g22x_hal_cfmc.o"
+".\objects\a31g22x_hal_timer1n.o"
+--strict --scatter ".\Objects\DualFlex_Display_A31G226.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\DualFlex_Display_A31G226.map" -o .\Objects\DualFlex_Display_A31G226.axf

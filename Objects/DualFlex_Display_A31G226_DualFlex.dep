@@ -1,0 +1,424 @@
+Dependencies for Project 'DualFlex_Display_A31G226', Target 'DualFlex': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (.\Src\Main.c)(0x62C61C04)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (Src\main_conf.h)(0x62425F0F)
+I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
+I (.\CMSIS\Include\core_cm0plus.h)(0x604841EC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025156E)
+I (.\CMSIS\Include\core_cmInstr.h)(0x604841EC)
+I (.\CMSIS\Include\cmsis_armcc.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmFunc.h)(0x604841EC)
+I (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)
+I (.\Drivers\Include\A31G22x_hal_aa_types.h)(0x61AD441A)
+I (.\Drivers\Include\debug_frmwrk.h)(0x62832C26)
+I (.\Drivers\Include\A31G22x_hal_uartn.h)(0x61AD441A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60251564)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60251566)
+I (.\Drivers\Include\A31G22x_hal_usart1n.h)(0x61AD441A)
+I (.\Header\A31G22x_libcfg.h)(0x625E6514)
+I (.\Drivers\Include\A31G22x_hal_adc.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_crc.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_i2c.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_pcu.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_pwr.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_scu.h)(0x62417F92)
+I (.\Drivers\Include\A31G22x_hal_timer1n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_timer2n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_timer3n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_spi.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_wdt.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_wt.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_cmp.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_dac.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_ts.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_lcd.h)(0x61AD441A)
+I (.\Header\GlobalValue.h)(0x62C4D557)
+I (.\Header\typedefine.h)(0x626254C5)
+I (.\Header\Init.h)(0x626254C1)
+I (.\Header\LEDControl.h)(0x62870058)
+I (.\Header\Touch.h)(0x6271DC61)
+I (.\Header\Uart.h)(0x6271DC54)
+I (.\Header\Display.h)(0x628D792C)
+F (.\Src\Init.c)(0x6284562F)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\init.o --omf_browse .\objects\init.crf --depend .\objects\init.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025156E)
+I (.\Header\Init.h)(0x626254C1)
+I (.\Src\main_conf.h)(0x62425F0F)
+I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
+I (.\CMSIS\Include\core_cm0plus.h)(0x604841EC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025156E)
+I (.\CMSIS\Include\core_cmInstr.h)(0x604841EC)
+I (.\CMSIS\Include\cmsis_armcc.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmFunc.h)(0x604841EC)
+I (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)
+I (.\Drivers\Include\A31G22x_hal_aa_types.h)(0x61AD441A)
+I (.\Drivers\Include\debug_frmwrk.h)(0x62832C26)
+I (.\Drivers\Include\A31G22x_hal_uartn.h)(0x61AD441A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60251564)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60251566)
+I (.\Drivers\Include\A31G22x_hal_usart1n.h)(0x61AD441A)
+I (.\Header\A31G22x_libcfg.h)(0x625E6514)
+I (.\Drivers\Include\A31G22x_hal_adc.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_crc.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_i2c.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_pcu.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_pwr.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_scu.h)(0x62417F92)
+I (.\Drivers\Include\A31G22x_hal_timer1n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_timer2n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_timer3n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_spi.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_wdt.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_wt.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_cmp.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_dac.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_ts.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_lcd.h)(0x61AD441A)
+I (.\Header\typedefine.h)(0x626254C5)
+I (.\Header\GlobalValue.h)(0x62C4D557)
+F (.\Src\LEDControl.c)(0x62C4E3FF)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\ledcontrol.o --omf_browse .\objects\ledcontrol.crf --depend .\objects\ledcontrol.d)
+I (.\Header\GlobalValue.h)(0x62C4D557)
+I (.\Src\main_conf.h)(0x62425F0F)
+I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
+I (.\CMSIS\Include\core_cm0plus.h)(0x604841EC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025156E)
+I (.\CMSIS\Include\core_cmInstr.h)(0x604841EC)
+I (.\CMSIS\Include\cmsis_armcc.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmFunc.h)(0x604841EC)
+I (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)
+I (.\Drivers\Include\A31G22x_hal_aa_types.h)(0x61AD441A)
+I (.\Drivers\Include\debug_frmwrk.h)(0x62832C26)
+I (.\Drivers\Include\A31G22x_hal_uartn.h)(0x61AD441A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60251564)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60251566)
+I (.\Drivers\Include\A31G22x_hal_usart1n.h)(0x61AD441A)
+I (.\Header\A31G22x_libcfg.h)(0x625E6514)
+I (.\Drivers\Include\A31G22x_hal_adc.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_crc.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_i2c.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_pcu.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_pwr.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_scu.h)(0x62417F92)
+I (.\Drivers\Include\A31G22x_hal_timer1n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_timer2n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_timer3n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_spi.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_wdt.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_wt.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_cmp.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_dac.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_ts.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_lcd.h)(0x61AD441A)
+I (.\Header\typedefine.h)(0x626254C5)
+I (.\Header\LEDControl.h)(0x62870058)
+F (.\Src\Isr.c)(0x62ABD4C3)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\isr.o --omf_browse .\objects\isr.crf --depend .\objects\isr.d)
+I (.\Header\GlobalValue.h)(0x62C4D557)
+I (.\Src\main_conf.h)(0x62425F0F)
+I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
+I (.\CMSIS\Include\core_cm0plus.h)(0x604841EC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025156E)
+I (.\CMSIS\Include\core_cmInstr.h)(0x604841EC)
+I (.\CMSIS\Include\cmsis_armcc.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmFunc.h)(0x604841EC)
+I (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)
+I (.\Drivers\Include\A31G22x_hal_aa_types.h)(0x61AD441A)
+I (.\Drivers\Include\debug_frmwrk.h)(0x62832C26)
+I (.\Drivers\Include\A31G22x_hal_uartn.h)(0x61AD441A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60251564)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60251566)
+I (.\Drivers\Include\A31G22x_hal_usart1n.h)(0x61AD441A)
+I (.\Header\A31G22x_libcfg.h)(0x625E6514)
+I (.\Drivers\Include\A31G22x_hal_adc.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_crc.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_i2c.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_pcu.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_pwr.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_scu.h)(0x62417F92)
+I (.\Drivers\Include\A31G22x_hal_timer1n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_timer2n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_timer3n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_spi.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_wdt.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_wt.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_cmp.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_dac.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_ts.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_lcd.h)(0x61AD441A)
+I (.\Header\typedefine.h)(0x626254C5)
+F (.\Src\GlobalValue.c)(0x62902D19)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\globalvalue.o --omf_browse .\objects\globalvalue.crf --depend .\objects\globalvalue.d)
+I (.\Header\GlobalValue.h)(0x62C4D557)
+I (.\Src\main_conf.h)(0x62425F0F)
+I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
+I (.\CMSIS\Include\core_cm0plus.h)(0x604841EC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025156E)
+I (.\CMSIS\Include\core_cmInstr.h)(0x604841EC)
+I (.\CMSIS\Include\cmsis_armcc.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmFunc.h)(0x604841EC)
+I (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)
+I (.\Drivers\Include\A31G22x_hal_aa_types.h)(0x61AD441A)
+I (.\Drivers\Include\debug_frmwrk.h)(0x62832C26)
+I (.\Drivers\Include\A31G22x_hal_uartn.h)(0x61AD441A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60251564)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60251566)
+I (.\Drivers\Include\A31G22x_hal_usart1n.h)(0x61AD441A)
+I (.\Header\A31G22x_libcfg.h)(0x625E6514)
+I (.\Drivers\Include\A31G22x_hal_adc.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_crc.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_i2c.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_pcu.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_pwr.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_scu.h)(0x62417F92)
+I (.\Drivers\Include\A31G22x_hal_timer1n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_timer2n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_timer3n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_spi.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_wdt.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_wt.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_cmp.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_dac.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_ts.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_lcd.h)(0x61AD441A)
+I (.\Header\typedefine.h)(0x626254C5)
+F (.\Src\Touch.c)(0x62995E7C)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\touch.o --omf_browse .\objects\touch.crf --depend .\objects\touch.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025156E)
+I (.\Header\GlobalValue.h)(0x62C4D557)
+I (.\Src\main_conf.h)(0x62425F0F)
+I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
+I (.\CMSIS\Include\core_cm0plus.h)(0x604841EC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025156E)
+I (.\CMSIS\Include\core_cmInstr.h)(0x604841EC)
+I (.\CMSIS\Include\cmsis_armcc.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmFunc.h)(0x604841EC)
+I (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)
+I (.\Drivers\Include\A31G22x_hal_aa_types.h)(0x61AD441A)
+I (.\Drivers\Include\debug_frmwrk.h)(0x62832C26)
+I (.\Drivers\Include\A31G22x_hal_uartn.h)(0x61AD441A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60251564)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60251566)
+I (.\Drivers\Include\A31G22x_hal_usart1n.h)(0x61AD441A)
+I (.\Header\A31G22x_libcfg.h)(0x625E6514)
+I (.\Drivers\Include\A31G22x_hal_adc.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_crc.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_i2c.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_pcu.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_pwr.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_scu.h)(0x62417F92)
+I (.\Drivers\Include\A31G22x_hal_timer1n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_timer2n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_timer3n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_spi.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_wdt.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_wt.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_cmp.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_dac.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_ts.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_lcd.h)(0x61AD441A)
+I (.\Header\typedefine.h)(0x626254C5)
+I (.\Header\Touch.h)(0x6271DC61)
+I (.\Header\LEDControl.h)(0x62870058)
+F (.\Src\Uart.c)(0x62ABD7F4)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
+I (.\Header\GlobalValue.h)(0x62C4D557)
+I (.\Src\main_conf.h)(0x62425F0F)
+I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
+I (.\CMSIS\Include\core_cm0plus.h)(0x604841EC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025156E)
+I (.\CMSIS\Include\core_cmInstr.h)(0x604841EC)
+I (.\CMSIS\Include\cmsis_armcc.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmFunc.h)(0x604841EC)
+I (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)
+I (.\Drivers\Include\A31G22x_hal_aa_types.h)(0x61AD441A)
+I (.\Drivers\Include\debug_frmwrk.h)(0x62832C26)
+I (.\Drivers\Include\A31G22x_hal_uartn.h)(0x61AD441A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60251564)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60251566)
+I (.\Drivers\Include\A31G22x_hal_usart1n.h)(0x61AD441A)
+I (.\Header\A31G22x_libcfg.h)(0x625E6514)
+I (.\Drivers\Include\A31G22x_hal_adc.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_crc.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_i2c.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_pcu.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_pwr.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_scu.h)(0x62417F92)
+I (.\Drivers\Include\A31G22x_hal_timer1n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_timer2n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_timer3n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_spi.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_wdt.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_wt.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_cmp.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_dac.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_ts.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_lcd.h)(0x61AD441A)
+I (.\Header\typedefine.h)(0x626254C5)
+I (.\Header\Uart.h)(0x6271DC54)
+F (.\Src\Display.c)(0x62C623DA)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\display.o --omf_browse .\objects\display.crf --depend .\objects\display.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025156E)
+I (.\Header\GlobalValue.h)(0x62C4D557)
+I (.\Src\main_conf.h)(0x62425F0F)
+I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
+I (.\CMSIS\Include\core_cm0plus.h)(0x604841EC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025156E)
+I (.\CMSIS\Include\core_cmInstr.h)(0x604841EC)
+I (.\CMSIS\Include\cmsis_armcc.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmFunc.h)(0x604841EC)
+I (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)
+I (.\Drivers\Include\A31G22x_hal_aa_types.h)(0x61AD441A)
+I (.\Drivers\Include\debug_frmwrk.h)(0x62832C26)
+I (.\Drivers\Include\A31G22x_hal_uartn.h)(0x61AD441A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60251564)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60251566)
+I (.\Drivers\Include\A31G22x_hal_usart1n.h)(0x61AD441A)
+I (.\Header\A31G22x_libcfg.h)(0x625E6514)
+I (.\Drivers\Include\A31G22x_hal_adc.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_crc.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_i2c.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_pcu.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_pwr.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_scu.h)(0x62417F92)
+I (.\Drivers\Include\A31G22x_hal_timer1n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_timer2n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_timer3n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_spi.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_wdt.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_wt.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_cmp.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_dac.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_ts.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_lcd.h)(0x61AD441A)
+I (.\Header\typedefine.h)(0x626254C5)
+I (.\Header\Display.h)(0x628D792C)
+I (.\Header\LEDControl.h)(0x62870058)
+F (.\Device\ABOV\A31G22x\Source\ARM\startup_A31G22x.s)(0x610A134B)(--cpu Cortex-M0+ --li --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include--pd "__UVISION_VERSION SETA 535" --pd "ARMCM0P SETA 1"--list .\listings\startup_a31g22x.lst --xref -o .\objects\startup_a31g22x.o --depend .\objects\startup_a31g22x.d)
+F (.\Device\ABOV\A31G22x\Source\system_A31G22x.c)(0x604841EC)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\system_a31g22x.o --omf_browse .\objects\system_a31g22x.crf --depend .\objects\system_a31g22x.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025156E)
+I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
+I (.\CMSIS\Include\core_cm0plus.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmInstr.h)(0x604841EC)
+I (.\CMSIS\Include\cmsis_armcc.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmFunc.h)(0x604841EC)
+I (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)
+F (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)()
+F (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)()
+F (.\Header\Init.h)(0x626254C1)()
+F (.\Header\LEDControl.h)(0x62870058)()
+F (.\Header\GlobalValue.h)(0x62C4D557)()
+F (.\Header\typedefine.h)(0x626254C5)()
+F (.\Header\Touch.h)(0x6271DC61)()
+F (.\Header\Uart.h)(0x6271DC54)()
+F (.\Header\Display.h)(0x628D792C)()
+F (.\Drivers\Source\A31G22x_hal_scu.c)(0x62417FEB)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\a31g22x_hal_scu.o --omf_browse .\objects\a31g22x_hal_scu.crf --depend .\objects\a31g22x_hal_scu.d)
+I (.\Drivers\Include\A31G22x_hal_scu.h)(0x62417F92)
+I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
+I (.\CMSIS\Include\core_cm0plus.h)(0x604841EC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025156E)
+I (.\CMSIS\Include\core_cmInstr.h)(0x604841EC)
+I (.\CMSIS\Include\cmsis_armcc.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmFunc.h)(0x604841EC)
+I (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)
+I (.\Drivers\Include\A31G22x_hal_aa_types.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_pcu.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_cfmc.h)(0x61AD441A)
+F (.\Drivers\Source\A31G22x_hal_i2c.c)(0x626744B8)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\a31g22x_hal_i2c.o --omf_browse .\objects\a31g22x_hal_i2c.crf --depend .\objects\a31g22x_hal_i2c.d)
+I (.\Header\A31G22x_libcfg.h)(0x625E6514)
+I (.\Drivers\Include\A31G22x_hal_aa_types.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_scu.h)(0x62417F92)
+I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
+I (.\CMSIS\Include\core_cm0plus.h)(0x604841EC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025156E)
+I (.\CMSIS\Include\core_cmInstr.h)(0x604841EC)
+I (.\CMSIS\Include\cmsis_armcc.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmFunc.h)(0x604841EC)
+I (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)
+I (.\Drivers\Include\A31G22x_hal_i2c.h)(0x61AD441A)
+F (.\Drivers\Source\A31G22x_hal_uartn.c)(0x62AAC867)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\a31g22x_hal_uartn.o --omf_browse .\objects\a31g22x_hal_uartn.crf --depend .\objects\a31g22x_hal_uartn.d)
+I (.\Drivers\Include\A31G22x_hal_uartn.h)(0x61AD441A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60251564)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60251566)
+I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
+I (.\CMSIS\Include\core_cm0plus.h)(0x604841EC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025156E)
+I (.\CMSIS\Include\core_cmInstr.h)(0x604841EC)
+I (.\CMSIS\Include\cmsis_armcc.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmFunc.h)(0x604841EC)
+I (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)
+I (.\Drivers\Include\A31G22x_hal_aa_types.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_scu.h)(0x62417F92)
+F (.\Drivers\Source\debug.c)(0x61AD441A)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\debug.o --omf_browse .\objects\debug.crf --depend .\objects\debug.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025156E)
+I (.\Drivers\Include\debug_frmwrk.h)(0x62832C26)
+I (.\Drivers\Include\A31G22x_hal_uartn.h)(0x61AD441A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60251564)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60251566)
+I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
+I (.\CMSIS\Include\core_cm0plus.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmInstr.h)(0x604841EC)
+I (.\CMSIS\Include\cmsis_armcc.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmFunc.h)(0x604841EC)
+I (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)
+I (.\Drivers\Include\A31G22x_hal_aa_types.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_usart1n.h)(0x61AD441A)
+F (.\Drivers\Source\debug_cmd.c)(0x61AD441A)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\debug_cmd.o --omf_browse .\objects\debug_cmd.crf --depend .\objects\debug_cmd.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025156E)
+I (.\Drivers\Include\debug_cmd.h)(0x61AD441A)
+I (.\Drivers\Include\debug_frmwrk.h)(0x62832C26)
+I (.\Drivers\Include\A31G22x_hal_uartn.h)(0x61AD441A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60251564)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60251566)
+I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
+I (.\CMSIS\Include\core_cm0plus.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmInstr.h)(0x604841EC)
+I (.\CMSIS\Include\cmsis_armcc.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmFunc.h)(0x604841EC)
+I (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)
+I (.\Drivers\Include\A31G22x_hal_aa_types.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_usart1n.h)(0x61AD441A)
+F (.\Drivers\Source\debug_frmwrk.c)(0x62832C84)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\debug_frmwrk.o --omf_browse .\objects\debug_frmwrk.crf --depend .\objects\debug_frmwrk.d)
+I (.\Drivers\Include\debug_frmwrk.h)(0x62832C26)
+I (.\Drivers\Include\A31G22x_hal_uartn.h)(0x61AD441A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60251564)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x60251566)
+I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
+I (.\CMSIS\Include\core_cm0plus.h)(0x604841EC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025156E)
+I (.\CMSIS\Include\core_cmInstr.h)(0x604841EC)
+I (.\CMSIS\Include\cmsis_armcc.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmFunc.h)(0x604841EC)
+I (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)
+I (.\Drivers\Include\A31G22x_hal_aa_types.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_usart1n.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_pcu.h)(0x61AD441A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60251564)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025156E)
+F (.\Drivers\Source\A31G22x_hal_pcu.c)(0x6225582B)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\a31g22x_hal_pcu.o --omf_browse .\objects\a31g22x_hal_pcu.crf --depend .\objects\a31g22x_hal_pcu.d)
+I (.\Header\A31G22x_libcfg.h)(0x625E6514)
+I (.\Drivers\Include\A31G22x_hal_aa_types.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_pcu.h)(0x61AD441A)
+I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
+I (.\CMSIS\Include\core_cm0plus.h)(0x604841EC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025156E)
+I (.\CMSIS\Include\core_cmInstr.h)(0x604841EC)
+I (.\CMSIS\Include\cmsis_armcc.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmFunc.h)(0x604841EC)
+I (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)
+F (.\Drivers\Source\A31G22x_hal_cfmc.c)(0x61AD441A)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\a31g22x_hal_cfmc.o --omf_browse .\objects\a31g22x_hal_cfmc.crf --depend .\objects\a31g22x_hal_cfmc.d)
+I (.\Header\A31G22x_libcfg.h)(0x625E6514)
+I (.\Drivers\Include\A31G22x_hal_aa_types.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_cfmc.h)(0x61AD441A)
+I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
+I (.\CMSIS\Include\core_cm0plus.h)(0x604841EC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025156E)
+I (.\CMSIS\Include\core_cmInstr.h)(0x604841EC)
+I (.\CMSIS\Include\cmsis_armcc.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmFunc.h)(0x604841EC)
+I (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)
+F (.\Drivers\Source\A31G22x_hal_timer1n.c)(0x625E64F3)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\a31g22x_hal_timer1n.o --omf_browse .\objects\a31g22x_hal_timer1n.crf --depend .\objects\a31g22x_hal_timer1n.d)
+I (.\Header\A31G22x_libcfg.h)(0x625E6514)
+I (.\Drivers\Include\A31G22x_hal_aa_types.h)(0x61AD441A)
+I (.\Drivers\Include\A31G22x_hal_scu.h)(0x62417F92)
+I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
+I (.\CMSIS\Include\core_cm0plus.h)(0x604841EC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025156E)
+I (.\CMSIS\Include\core_cmInstr.h)(0x604841EC)
+I (.\CMSIS\Include\cmsis_armcc.h)(0x604841EC)
+I (.\CMSIS\Include\core_cmFunc.h)(0x604841EC)
+I (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)
+I (.\Drivers\Include\A31G22x_hal_timer1n.h)(0x61AD441A)

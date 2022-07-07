@@ -1,0 +1,11 @@
+.\objects\a31g22x_hal_cfmc.o: Drivers\Source\A31G22x_hal_cfmc.c
+.\objects\a31g22x_hal_cfmc.o: .\Header\A31G22x_libcfg.h
+.\objects\a31g22x_hal_cfmc.o: .\Drivers\Include\A31G22x_hal_aa_types.h
+.\objects\a31g22x_hal_cfmc.o: .\Drivers\Include\A31G22x_hal_cfmc.h
+.\objects\a31g22x_hal_cfmc.o: .\Device\ABOV\A31G22x\Include\A31G22x.h
+.\objects\a31g22x_hal_cfmc.o: .\CMSIS\Include\core_cm0plus.h
+.\objects\a31g22x_hal_cfmc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\a31g22x_hal_cfmc.o: .\CMSIS\Include\core_cmInstr.h
+.\objects\a31g22x_hal_cfmc.o: .\CMSIS\Include\cmsis_armcc.h
+.\objects\a31g22x_hal_cfmc.o: .\CMSIS\Include\core_cmFunc.h
+.\objects\a31g22x_hal_cfmc.o: .\Device\ABOV\A31G22x\Include\system_A31G22x.h
