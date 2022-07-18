@@ -1,6 +1,6 @@
 Dependencies for Project 'DualFlex_Display_A31G226', Target 'DualFlex': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (.\Src\Main.c)(0x62C61C04)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\Src\Main.c)(0x62D4F699)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (Src\main_conf.h)(0x62425F0F)
 I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
 I (.\CMSIS\Include\core_cm0plus.h)(0x604841EC)
@@ -75,7 +75,7 @@ I (.\Drivers\Include\A31G22x_hal_ts.h)(0x61AD441A)
 I (.\Drivers\Include\A31G22x_hal_lcd.h)(0x61AD441A)
 I (.\Header\typedefine.h)(0x626254C5)
 I (.\Header\GlobalValue.h)(0x62C4D557)
-F (.\Src\LEDControl.c)(0x62C4E3FF)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\ledcontrol.o --omf_browse .\objects\ledcontrol.crf --depend .\objects\ledcontrol.d)
+F (.\Src\LEDControl.c)(0x62D4EAC6)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\ledcontrol.o --omf_browse .\objects\ledcontrol.crf --depend .\objects\ledcontrol.d)
 I (.\Header\GlobalValue.h)(0x62C4D557)
 I (.\Src\main_conf.h)(0x62425F0F)
 I (.\Device\ABOV\A31G22x\Include\A31G22x.h)(0x62417FC3)
@@ -178,7 +178,7 @@ I (.\Drivers\Include\A31G22x_hal_dac.h)(0x61AD441A)
 I (.\Drivers\Include\A31G22x_hal_ts.h)(0x61AD441A)
 I (.\Drivers\Include\A31G22x_hal_lcd.h)(0x61AD441A)
 I (.\Header\typedefine.h)(0x626254C5)
-F (.\Src\Touch.c)(0x62995E7C)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\touch.o --omf_browse .\objects\touch.crf --depend .\objects\touch.d)
+F (.\Src\Touch.c)(0x62D501E8)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\touch.o --omf_browse .\objects\touch.crf --depend .\objects\touch.d)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025156E)
 I (.\Header\GlobalValue.h)(0x62C4D557)
 I (.\Src\main_conf.h)(0x62425F0F)
@@ -250,7 +250,7 @@ I (.\Drivers\Include\A31G22x_hal_ts.h)(0x61AD441A)
 I (.\Drivers\Include\A31G22x_hal_lcd.h)(0x61AD441A)
 I (.\Header\typedefine.h)(0x626254C5)
 I (.\Header\Uart.h)(0x6271DC54)
-F (.\Src\Display.c)(0x62C623DA)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\display.o --omf_browse .\objects\display.crf --depend .\objects\display.d)
+F (.\Src\Display.c)(0x62D4FFDF)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\display.o --omf_browse .\objects\display.crf --depend .\objects\display.d)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025156E)
 I (.\Header\GlobalValue.h)(0x62C4D557)
 I (.\Src\main_conf.h)(0x62425F0F)
@@ -317,7 +317,7 @@ I (.\Device\ABOV\A31G22x\Include\system_A31G22x.h)(0x604841EE)
 I (.\Drivers\Include\A31G22x_hal_aa_types.h)(0x61AD441A)
 I (.\Drivers\Include\A31G22x_hal_pcu.h)(0x61AD441A)
 I (.\Drivers\Include\A31G22x_hal_cfmc.h)(0x61AD441A)
-F (.\Drivers\Source\A31G22x_hal_i2c.c)(0x626744B8)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\a31g22x_hal_i2c.o --omf_browse .\objects\a31g22x_hal_i2c.crf --depend .\objects\a31g22x_hal_i2c.d)
+F (.\Drivers\Source\A31G22x_hal_i2c.c)(0x62D4BA1C)(-c --cpu Cortex-M0+ -D__EVAL --li -g -O0 --apcs=interwork -I .\Device\ABOV\A31G22x\Include -I .\CMSIS\Include -I .\Drivers\Include -I .\Src -I .\Header-IC:\Users\haatz\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="535" -DARMCM0P-o .\objects\a31g22x_hal_i2c.o --omf_browse .\objects\a31g22x_hal_i2c.crf --depend .\objects\a31g22x_hal_i2c.d)
 I (.\Header\A31G22x_libcfg.h)(0x625E6514)
 I (.\Drivers\Include\A31G22x_hal_aa_types.h)(0x61AD441A)
 I (.\Drivers\Include\A31G22x_hal_scu.h)(0x62417F92)

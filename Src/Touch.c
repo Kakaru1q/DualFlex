@@ -86,6 +86,20 @@ void PLSelect(UINT8 ucTouchKey)
 			default :
 				break;			
 		}
+		if(gaucFlexFlag[LEFT] == SET)
+		{
+			if(ucBNR == LR_BNR) gaucPowerLevel[LF_BNR] = gaucPowerLevel[LR_BNR];
+			else if(ucBNR == LF_BNR) gaucPowerLevel[LR_BNR] = gaucPowerLevel[LF_BNR];
+		}
+		else if(gaucFlexFlag[RIGHT] == SET)
+		{
+			if(ucBNR == RR_BNR) gaucPowerLevel[RF_BNR] = gaucPowerLevel[RR_BNR];
+			else if(ucBNR == RF_BNR) gaucPowerLevel[RR_BNR] = gaucPowerLevel[RF_BNR];
+		}
+		else
+		{
+			;
+		}
 
 	}
 	else
@@ -100,59 +114,70 @@ void TouchJob(void)
 {
 	if(gucKeyProcessingFlag == CLR)
 	{
-		switch(gucTouchKey)
+		if(gucTouchKey == LOCK_KEY)
 		{
-			case LOCK_KEY :	//LongKey
-				gucLockFlag ^= SET;
-				gucKeyProcessingFlag = SET;
-				break;
-			case AUTOPOT_KEY :
-				gucAutoPotSetFlag ^= SET;
-				gucKeyProcessingFlag = SET;
-				break;
-			case PAUSE_KEY :
-				gucPauseFlag ^= SET;
-				gucKeyProcessingFlag = SET;
-				break;
-			case BOOST_KEY :
-				gucBoostFlag ^= SET;
-				gucKeyProcessingFlag = SET;
-				break;
-			case TIMER_KEY :
-				gucKeyProcessingFlag = SET;
-				break;
-			case FLEX_LEFT_KEY :
-				gaucFlexFlag[LEFT] ^= SET;
-				gucKeyProcessingFlag = SET;
-				break;
-			case FLEX_RIGHT_KEY :
-				gaucFlexFlag[RIGHT] ^= SET;
-				gucKeyProcessingFlag = SET;
-				break;
-			case LRBNR_KEY :
-				memset(gaucBNRSelectFlag,0,sizeof(gaucBNRSelectFlag));
-				gaucBNRSelectFlag[LR_BNR] = SET;
-				gucKeyProcessingFlag = SET;
-				break;
-			case LFBNR_KEY :
-				memset(gaucBNRSelectFlag,0,sizeof(gaucBNRSelectFlag));
-				gaucBNRSelectFlag[LF_BNR] = SET;
-				gucKeyProcessingFlag = SET;
-				break;
-			case RFBNR_KEY :
-				memset(gaucBNRSelectFlag,0,sizeof(gaucBNRSelectFlag));
-				gaucBNRSelectFlag[RF_BNR] = SET;
-				gucKeyProcessingFlag = SET;
-				break;
-			case RRBNR_KEY :
-				memset(gaucBNRSelectFlag,0,sizeof(gaucBNRSelectFlag));
-				gaucBNRSelectFlag[RR_BNR] = SET;
-				gucKeyProcessingFlag = SET;
-				break;
+			gucLockFlag ^= SET;
+			gucKeyProcessingFlag = SET;
+		}
+		else
+		{
+			if(gucLockFlag == CLR)
+			{
+				switch(gucTouchKey)
+				{
+					case LOCK_KEY :	//LongKey
+						gucLockFlag ^= SET;
+						gucKeyProcessingFlag = SET;
+						break;
+					case AUTOPOT_KEY :
+						gucAutoPotSetFlag ^= SET;
+						gucKeyProcessingFlag = SET;
+						break;
+					case PAUSE_KEY :
+						gucPauseFlag ^= SET;
+						gucKeyProcessingFlag = SET;
+						break;
+					case BOOST_KEY :
+						gucBoostFlag ^= SET;
+						gucKeyProcessingFlag = SET;
+						break;
+					case TIMER_KEY :
+						gucKeyProcessingFlag = SET;
+						break;
+					case FLEX_LEFT_KEY :
+						gaucFlexFlag[LEFT] ^= SET;
+						gucKeyProcessingFlag = SET;
+						break;
+					case FLEX_RIGHT_KEY :
+						gaucFlexFlag[RIGHT] ^= SET;
+						gucKeyProcessingFlag = SET;
+						break;
+					case LRBNR_KEY :
+						memset(gaucBNRSelectFlag,0,sizeof(gaucBNRSelectFlag));
+						gaucBNRSelectFlag[LR_BNR] = SET;
+						gucKeyProcessingFlag = SET;
+						break;
+					case LFBNR_KEY :
+						memset(gaucBNRSelectFlag,0,sizeof(gaucBNRSelectFlag));
+						gaucBNRSelectFlag[LF_BNR] = SET;
+						gucKeyProcessingFlag = SET;
+						break;
+					case RFBNR_KEY :
+						memset(gaucBNRSelectFlag,0,sizeof(gaucBNRSelectFlag));
+						gaucBNRSelectFlag[RF_BNR] = SET;
+						gucKeyProcessingFlag = SET;
+						break;
+					case RRBNR_KEY :
+						memset(gaucBNRSelectFlag,0,sizeof(gaucBNRSelectFlag));
+						gaucBNRSelectFlag[RR_BNR] = SET;
+						gucKeyProcessingFlag = SET;
+						break;
 
-			default :
-				PLSelect(gucTouchKey);
-				break;
+					default :
+						PLSelect(gucTouchKey);
+						break;
+				}
+			}
 		}
 		
 	}

@@ -26,7 +26,7 @@
 
 #include "A31G22x_hal_scu.h"
 #include "A31G22x_hal_i2c.h"
-
+//#include "Touch.h"
 /*******************************************************************************
 * Private Pre-processor Definition & Macro
 *******************************************************************************/
@@ -362,14 +362,27 @@ s_int_end:
 *                        - I2C2    :I2C2 peripheral
 * @return        Return status
 **********************************************************************/
-int32_t HAL_I2C_MWait(I2C_Type *I2Cx) {
+int32_t HAL_I2C_MWait(I2C_Type *I2Cx, uint32_t tmp_CR) {
     uint32_t tmp;
     int32_t ret = 0;
+		uint8_t cnt = 0;
 
     I2Cx->ST = 0xFF;
     while (1) {
         if ((I2Cx->CR & 0x10) != 0)
-            break;
+				{
+					break;				//Error : Retry
+				}
+				else
+				{
+					cnt++;
+				}
+				if(cnt >= 100)
+				{
+					cnt = 0;
+					I2Cx->CR = tmp_CR;
+				}
+				
     }
 
     tmp = I2Cx->ST;
@@ -414,12 +427,21 @@ Status HAL_I2C_MasterTransferData(I2C_Type* I2Cx, I2C_M_SETUP_Type *TransferCfg,
     int32_t tmp;
     uint32_t exitflag;
     int32_t Ret;
+		uint32_t tmp_CR;
+		uint8_t cnt = 0;
 
     // Reset I2C setup value to default state
     TransferCfg->tx_count = 0;
     TransferCfg->rx_count = 0;
 
-    while (I2Cx->ST & 0x04) {}    // busy check //
+    while (I2Cx->ST & 0x04) {
+				cnt++;
+				if(cnt >= 10) 	
+				{
+				//	InitTQ12(TQ12_ID_GND);//0xD0 IC2
+				//	InitTQ12(TQ12_ID_VDD);//0xF0 IC1
+				}
+		}    // busy check //
 
     if (Opt == I2C_TRANSFER_POLLING) {
         /* First Start condition -------------------------------------------------------------- */
@@ -432,11 +454,13 @@ Status HAL_I2C_MasterTransferData(I2C_Type* I2Cx, I2C_M_SETUP_Type *TransferCfg,
 
             // Start command
             I2Cx->CR |= (1 << 0); // START
-            Ret = HAL_I2C_MWait(I2Cx);
+						tmp_CR = I2Cx->CR;
+            Ret = HAL_I2C_MWait(I2Cx,tmp_CR);
 
             if ((Ret != TRANS_MODE)) {
                 I2Cx->CR |= (1 << 1); // STOP
-                HAL_I2C_MWait(I2Cx);
+								tmp_CR = I2Cx->CR;
+                HAL_I2C_MWait(I2Cx,tmp_CR);
                 I2Cx->ST = 0xFF;
                 I2Cx->CR = 0
                 | (1 << 7)    // I2C Block Enable
@@ -450,11 +474,13 @@ Status HAL_I2C_MasterTransferData(I2C_Type* I2Cx, I2C_M_SETUP_Type *TransferCfg,
                 if (TransferCfg->tx_count < TransferCfg->tx_length) {
                     I2Cx->DR = TransferCfg->tx_data[TransferCfg->tx_count];
                     TransferCfg->tx_count++;
-                    Ret = HAL_I2C_MWait(I2Cx);
+                    Ret = HAL_I2C_MWait(I2Cx,tmp_CR);
 
                     if ((Ret != TRANS_DATA)) {
                         I2Cx->CR |= (1 << 1);    // STOP
-                        HAL_I2C_MWait(I2Cx);
+												tmp_CR = I2Cx->CR;
+												HAL_I2C_MWait(I2Cx,tmp_CR);
+
                         I2Cx->ST = 0xFF;
                         I2Cx->CR = 0
                         | (1 << 7)            // I2C Block Enable
@@ -465,7 +491,9 @@ Status HAL_I2C_MasterTransferData(I2C_Type* I2Cx, I2C_M_SETUP_Type *TransferCfg,
                 } else {
                     if (TransferCfg->rx_count >= TransferCfg->rx_length) {
                         I2Cx->CR |= (1 << 1);    // STOP
-                        HAL_I2C_MWait(I2Cx);
+												tmp_CR = I2Cx->CR;
+												HAL_I2C_MWait(I2Cx,tmp_CR);
+               
                         I2Cx->ST = 0xFF; //?
                         I2Cx->CR = 0
                         | (1 << 7)            // I2C Block Enable
@@ -482,11 +510,14 @@ Status HAL_I2C_MasterTransferData(I2C_Type* I2Cx, I2C_M_SETUP_Type *TransferCfg,
         if (TransferCfg->rx_count < TransferCfg->rx_length) {
             I2Cx->DR = ((TransferCfg->sl_addr7bit << 1) | 0x01);
             I2Cx->CR |= (1 << 0);     // START
-            Ret = HAL_I2C_MWait(I2Cx);
+						tmp_CR = I2Cx->CR;
+            Ret = HAL_I2C_MWait(I2Cx,tmp_CR);
 
             if ((Ret != RECEIVE_MODE)) {
                 I2Cx->CR |= (1 << 1);   // STOP
-                HAL_I2C_MWait(I2Cx);
+								tmp_CR = I2Cx->CR;
+                HAL_I2C_MWait(I2Cx,tmp_CR);
+               
                 I2Cx->ST = 0xFF;
                 I2Cx->CR = 0
                 | (1 << 7)              // I2C Block Enable
@@ -498,11 +529,13 @@ Status HAL_I2C_MasterTransferData(I2C_Type* I2Cx, I2C_M_SETUP_Type *TransferCfg,
             exitflag = 1;
             while (exitflag) {
                 if ((TransferCfg->rx_length > 1) && (TransferCfg->rx_count < (TransferCfg->rx_length - 1))) {
-                    Ret = HAL_I2C_MWait(I2Cx);
+                    Ret = HAL_I2C_MWait(I2Cx,tmp_CR);
 
                     if ((Ret != RECEIVE_DATA)) {
                         I2Cx->CR |= (1 << 1);    // STOP
-                        HAL_I2C_MWait(I2Cx);
+												tmp_CR = I2Cx->CR;
+												HAL_I2C_MWait(I2Cx,tmp_CR);
+                        
                         I2Cx->ST = 0xFF;
                         I2Cx->CR = 0
                         | (1 << 7)            // I2C Block Enable
@@ -512,11 +545,13 @@ Status HAL_I2C_MasterTransferData(I2C_Type* I2Cx, I2C_M_SETUP_Type *TransferCfg,
                     }
                 } else {  // the next byte is the last byte, send NACK instead.
                     I2Cx->CR &= ((1 << 7) | (1 << 5));    // clear ACKEN
-                    Ret = HAL_I2C_MWait(I2Cx);
+										tmp_CR = I2Cx->CR;
+                    Ret = HAL_I2C_MWait(I2Cx,tmp_CR);
 
                     if ((Ret != RECEIVE_DATA)) {
                         I2Cx->CR |= (1<<1);    // STOP
-                        HAL_I2C_MWait(I2Cx);
+												tmp_CR = I2Cx->CR;
+                        HAL_I2C_MWait(I2Cx,tmp_CR);
                         I2Cx->ST = 0xFF;
                         I2Cx->CR = 0
                         | (1 << 7)            // I2C Block Enable
@@ -535,7 +570,8 @@ Status HAL_I2C_MasterTransferData(I2C_Type* I2Cx, I2C_M_SETUP_Type *TransferCfg,
             }
 
             I2Cx->CR |= (1 << 1);    // STOP
-            HAL_I2C_MWait(I2Cx);
+						tmp_CR = I2Cx->CR;
+            HAL_I2C_MWait(I2Cx,tmp_CR);
             I2Cx->ST = 0xFF;
             I2Cx->CR = 0
             | (1 << 7)            // I2C Block Enable
@@ -562,6 +598,7 @@ Status HAL_I2C_MasterTransferData(I2C_Type* I2Cx, I2C_M_SETUP_Type *TransferCfg,
 
         // Start command
         I2Cx->CR |= (1 << 0);    // START
+				tmp_CR = I2Cx->CR;
 
         return (SUCCESS);
     }

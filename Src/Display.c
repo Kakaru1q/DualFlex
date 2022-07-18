@@ -323,8 +323,8 @@ void BNRSelectDisplay(void)
 			LEDControl(RRBNR_BAR_LED1,ON);
 			if(gaucFlexFlag[RIGHT] == SET)
 			{
-				LEDControl(RFBNR_RIGHT_LED0,BLUE_ON);
-				LEDControl(RFBNR_RIGHT_LED1,BLUE_ON);
+				LEDControl(RFBNR_LEFT_LED0,BLUE_ON);
+				LEDControl(RFBNR_LEFT_LED1,BLUE_ON);
 				LEDControl(RFBNR_BAR_LED0,ON);
 				LEDControl(RFBNR_BAR_LED1,ON);
 			}
@@ -338,8 +338,8 @@ void BNRSelectDisplay(void)
 			LEDControl(RRBNR_BAR_LED1,OFF);
 			if(gaucFlexFlag[RIGHT] == SET)
 			{
-				LEDControl(RFBNR_RIGHT_LED0,WHITE_ON);
-				LEDControl(RFBNR_RIGHT_LED1,WHITE_ON);
+				LEDControl(RFBNR_LEFT_LED0,WHITE_ON);
+				LEDControl(RFBNR_LEFT_LED1,WHITE_ON);
 				LEDControl(RFBNR_BAR_LED0,OFF);
 				LEDControl(RFBNR_BAR_LED1,OFF);
 			}
@@ -386,8 +386,8 @@ void BNRSelectDisplay(void)
 			LEDControl(RFBNR_BAR_LED1,ON);
 			if(gaucFlexFlag[RIGHT] == SET)
 			{
-				LEDControl(RRBNR_RIGHT_LED0,BLUE_ON);
-				LEDControl(RRBNR_RIGHT_LED1,BLUE_ON);
+				LEDControl(RRBNR_LEFT_LED0,BLUE_ON);
+				LEDControl(RRBNR_LEFT_LED1,BLUE_ON);
 				LEDControl(RRBNR_BAR_LED0,ON);
 				LEDControl(RRBNR_BAR_LED1,ON);
 			}
@@ -401,8 +401,8 @@ void BNRSelectDisplay(void)
 			LEDControl(RFBNR_BAR_LED1,OFF);
 			if(gaucFlexFlag[RIGHT] == SET)
 			{
-				LEDControl(RRBNR_RIGHT_LED0,WHITE_ON);
-				LEDControl(RRBNR_RIGHT_LED1,WHITE_ON);
+				LEDControl(RRBNR_LEFT_LED0,WHITE_ON);
+				LEDControl(RRBNR_LEFT_LED1,WHITE_ON);
 				LEDControl(RRBNR_BAR_LED0,OFF);
 				LEDControl(RRBNR_BAR_LED1,OFF);
 			}
@@ -425,11 +425,11 @@ void BNRSelectDisplay(void)
 		memset(sucConfirmFlag,0,sizeof(sunBlinkCnt));
 	}
 	
-		if(gaucBNRSelectFlag[LF_BNR] == SET)
+		if((gaucBNRSelectFlag[LF_BNR] == SET) || (gaucBNRSelectFlag[LR_BNR] == SET && gaucFlexFlag[LEFT] == SET))
 		{
 			;
 		}
-		else if(gaucPowerLevel[LF_BNR] > 0)
+		else if((gaucPowerLevel[LF_BNR] > 0) || (gaucPowerLevel[LR_BNR] > 0 && gaucFlexFlag[LEFT] == SET))
 		{
 			SegmentLED_Control(LFBNR_SEG_LED,gaucPowerLevel[LF_BNR],ON);
 			LEDControl(LFBNR_RIGHT_LED0,BLUE_ON);
@@ -445,11 +445,11 @@ void BNRSelectDisplay(void)
 			LEDControl(LFBNR_BAR_LED0,OFF);
 			LEDControl(LFBNR_BAR_LED1,OFF);
 		}
-		if(gaucBNRSelectFlag[LR_BNR] == SET)		
+		if((gaucBNRSelectFlag[LR_BNR] == SET) || (gaucBNRSelectFlag[LF_BNR] == SET && gaucFlexFlag[LEFT] == SET))		
 		{
 			;
 		}
-		else if(gaucPowerLevel[LR_BNR] > 0)
+		else if((gaucPowerLevel[LR_BNR] > 0) || (gaucPowerLevel[LR_BNR] > 0 && gaucFlexFlag[LEFT] == SET))
 		{
 			SegmentLED_Control(LRBNR_SEG_LED,gaucPowerLevel[LR_BNR],ON);
 			LEDControl(LRBNR_RIGHT_LED0,BLUE_ON);
@@ -465,11 +465,11 @@ void BNRSelectDisplay(void)
 			LEDControl(LRBNR_BAR_LED0,OFF);
 			LEDControl(LRBNR_BAR_LED1,OFF);
 		}
-		if(gaucBNRSelectFlag[RF_BNR] == SET)		
+		if((gaucBNRSelectFlag[RF_BNR] == SET) || (gaucBNRSelectFlag[RR_BNR] == SET && gaucFlexFlag[RIGHT] == SET))		
 		{
 			;
 		}
-		else if(gaucPowerLevel[RF_BNR] > 0)
+		else if((gaucPowerLevel[RF_BNR] > 0) || (gaucPowerLevel[RR_BNR] > 0 && gaucFlexFlag[RIGHT] == SET))
 		{
 			SegmentLED_Control(RFBNR_SEG_LED,gaucPowerLevel[RF_BNR],ON);
 			LEDControl(RFBNR_LEFT_LED0,BLUE_ON);
@@ -485,11 +485,11 @@ void BNRSelectDisplay(void)
 			LEDControl(RFBNR_BAR_LED0,OFF);
 			LEDControl(RFBNR_BAR_LED1,OFF);
 		}
-	  if(gaucBNRSelectFlag[RR_BNR] == SET)		
+	  if((gaucBNRSelectFlag[RR_BNR] == SET) || (gaucBNRSelectFlag[RF_BNR] == SET && gaucFlexFlag[RIGHT] == SET))		
 		{
 			;
 		}
-		else if(gaucPowerLevel[RR_BNR] > 0)
+		else if((gaucPowerLevel[RR_BNR] > 0) || (gaucPowerLevel[RF_BNR] > 0 && gaucFlexFlag[RIGHT] == SET))
 		{
 			SegmentLED_Control(RRBNR_SEG_LED,gaucPowerLevel[RR_BNR],ON);
 			LEDControl(RRBNR_LEFT_LED0,BLUE_ON);

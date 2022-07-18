@@ -533,8 +533,8 @@ void LED17_23_Control(UINT8 ucLED, UINT8 ucState, UINT16 unComReg)
 				{			
 					if(unComReg & 0x02)
 					{
-						PA->BSR |= 0x0080;
-						PB->BCR |= 0x0001;
+						PB->BSR |= 0x0400;
+						PB->BCR |= 0x0800;
 					}
 					else
 					{

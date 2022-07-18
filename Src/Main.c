@@ -86,6 +86,22 @@ void DEFAULT_LEDControl(UINT8 ucState, UINT8 ucLEDState)
 	}
 }
  
+void IDLE_Init(void)
+{
+	//CLR Job
+	//Flag CLR
+	gucPauseFlag = 0;
+	gaucFlexFlag[LEFT] = 0;
+	gaucFlexFlag[RIGHT] = 0;
+	gucBoostFlag = 0;
+
+	//PL CLR
+	gaucPowerLevel[LR_BNR] = 0;
+	gaucPowerLevel[LF_BNR] = 0;
+	gaucPowerLevel[RR_BNR] = 0;
+	gaucPowerLevel[RF_BNR] = 0;
+	
+}
  
 void PF_STATE(void)
 {
@@ -145,6 +161,7 @@ void IDLE_STATE(void)
 	static UINT8 suc1mscnt = 0;
 	static UINT8 sucLongKeycnt = 0;
 	
+	IDLE_Init();
 	while(1)
 	{
 		//Display Job : if sensor hot
@@ -157,9 +174,9 @@ void IDLE_STATE(void)
 			LEDCOMControl();
 			//if Not HotSurface
 		/*	SegmentLED_Control(LRBNR_SEG_LED,8,ON);
-			SegmentLED_Control(LFBNR_SEG_LED,8,ON);
-			SegmentLED_Control(RRBNR_SEG_LED,8,ON);
-			SegmentLED_Control(RFBNR_SEG_LED,8,ON);
+			SegmentLED_Control(LFBNR_SEG_LED,7,ON);
+			SegmentLED_Control(RRBNR_SEG_LED,1,ON);
+			SegmentLED_Control(RFBNR_SEG_LED,3,ON);
 			SegmentLED_Control(TIMER10_LED,6,ON);
 			SegmentLED_Control(TIMER1_LED,0,ON);
 			LEDControl(BOOST_LED,WHITE_ON);
@@ -186,7 +203,23 @@ void IDLE_STATE(void)
 			LEDControl(LFBNR_BAR_LED0,ON);
 			LEDControl(LFBNR_BAR_LED1,ON);
 			LEDControl(RRBNR_BAR_LED1,ON);
-			LEDControl(RFBNR_BAR_LED0,ON);*/
+			LEDControl(RFBNR_BAR_LED0,ON);
+			LEDControl(LRBNR_LEFT_LED0,WHITE_ON);
+			LEDControl(LRBNR_LEFT_LED1,WHITE_ON);
+			LEDControl(LRBNR_RIGHT_LED0,WHITE_ON);
+			LEDControl(LRBNR_RIGHT_LED1,WHITE_ON);
+			LEDControl(LFBNR_LEFT_LED0,WHITE_ON);
+			LEDControl(LFBNR_LEFT_LED1,WHITE_ON);
+			LEDControl(LFBNR_RIGHT_LED0,WHITE_ON);
+			LEDControl(LFBNR_RIGHT_LED1,WHITE_ON);
+			LEDControl(RRBNR_LEFT_LED0,WHITE_ON);
+			LEDControl(RRBNR_LEFT_LED1,WHITE_ON);
+			LEDControl(RRBNR_RIGHT_LED0,WHITE_ON);
+			LEDControl(RRBNR_RIGHT_LED1,WHITE_ON);
+			LEDControl(RFBNR_LEFT_LED0,WHITE_ON);
+			LEDControl(RFBNR_LEFT_LED1,WHITE_ON);
+			LEDControl(RFBNR_RIGHT_LED0,WHITE_ON);
+			LEDControl(RFBNR_RIGHT_LED1,WHITE_ON);*/
 		}
 		if(suc1mscnt >= 5)//5ms?10ms?
 		{
@@ -205,11 +238,167 @@ void IDLE_STATE(void)
 	}
 }
 
+UINT8 WelcomeDisplay(UINT8 ucStep)
+{
+	UINT8 ucBP = 0;
+	
+	if(ucStep == 1)
+	{
+			LEDControl(LRBNR_RIGHT_LED0,WHITE_ON);
+			LEDControl(LRBNR_RIGHT_LED1,WHITE_ON);
+			LEDControl(LFBNR_RIGHT_LED0,WHITE_ON);
+			LEDControl(LFBNR_RIGHT_LED1,WHITE_ON);
+			LEDControl(RRBNR_LEFT_LED0,WHITE_ON);
+			LEDControl(RRBNR_LEFT_LED1,WHITE_ON);
+			LEDControl(RFBNR_LEFT_LED0,WHITE_ON);
+			LEDControl(RFBNR_LEFT_LED1,WHITE_ON);
+	}
+	else if(ucStep == 2)
+	{
+			LEDControl(LRBNR_RIGHT_LED0,WHITE_ON);
+			LEDControl(LRBNR_RIGHT_LED1,WHITE_ON);
+			LEDControl(LFBNR_RIGHT_LED0,WHITE_ON);
+			LEDControl(LFBNR_RIGHT_LED1,WHITE_ON);
+			LEDControl(RRBNR_LEFT_LED0,WHITE_ON);
+			LEDControl(RRBNR_LEFT_LED1,WHITE_ON);
+			LEDControl(RFBNR_LEFT_LED0,WHITE_ON);
+			LEDControl(RFBNR_LEFT_LED1,WHITE_ON);
+		
+		
+		
+			LEDControl(LRBNR_LEFT_LED0,WHITE_ON);
+			LEDControl(LRBNR_LEFT_LED1,WHITE_ON);
+			LEDControl(LFBNR_LEFT_LED0,WHITE_ON);
+			LEDControl(LFBNR_LEFT_LED1,WHITE_ON);
+			LEDControl(RRBNR_RIGHT_LED0,WHITE_ON);
+			LEDControl(RRBNR_RIGHT_LED1,WHITE_ON);
+			LEDControl(RFBNR_RIGHT_LED0,WHITE_ON);
+			LEDControl(RFBNR_RIGHT_LED1,WHITE_ON);
+	}
+	else if(ucStep == 3)
+	{
+			LEDControl(LRBNR_RIGHT_LED0,WHITE_ON);
+			LEDControl(LRBNR_RIGHT_LED1,WHITE_ON);
+			LEDControl(LFBNR_RIGHT_LED0,WHITE_ON);
+			LEDControl(LFBNR_RIGHT_LED1,WHITE_ON);
+			LEDControl(RRBNR_LEFT_LED0,WHITE_ON);
+			LEDControl(RRBNR_LEFT_LED1,WHITE_ON);
+			LEDControl(RFBNR_LEFT_LED0,WHITE_ON);
+			LEDControl(RFBNR_LEFT_LED1,WHITE_ON);
+		
+		
+		
+			LEDControl(LRBNR_LEFT_LED0,WHITE_ON);
+			LEDControl(LRBNR_LEFT_LED1,WHITE_ON);
+			LEDControl(LFBNR_LEFT_LED0,WHITE_ON);
+			LEDControl(LFBNR_LEFT_LED1,WHITE_ON);
+			LEDControl(RRBNR_RIGHT_LED0,WHITE_ON);
+			LEDControl(RRBNR_RIGHT_LED1,WHITE_ON);
+			LEDControl(RFBNR_RIGHT_LED0,WHITE_ON);
+			LEDControl(RFBNR_RIGHT_LED1,WHITE_ON);
+		
+		
+		
+			LEDControl(LOCK_LED,WHITE_ON);
+			LEDControl(PAUSE_LED,WHITE_ON);
+			LEDControl(TIMER_LED,WHITE_ON);
+			LEDControl(BOOST_LED,WHITE_ON);
+	}
+	else if(ucStep == 4)
+	{
+			LEDControl(LRBNR_RIGHT_LED0,WHITE_ON);
+			LEDControl(LRBNR_RIGHT_LED1,WHITE_ON);
+			LEDControl(LFBNR_RIGHT_LED0,WHITE_ON);
+			LEDControl(LFBNR_RIGHT_LED1,WHITE_ON);
+			LEDControl(RRBNR_LEFT_LED0,WHITE_ON);
+			LEDControl(RRBNR_LEFT_LED1,WHITE_ON);
+			LEDControl(RFBNR_LEFT_LED0,WHITE_ON);
+			LEDControl(RFBNR_LEFT_LED1,WHITE_ON);
+		
+		
+		
+			LEDControl(LRBNR_LEFT_LED0,WHITE_ON);
+			LEDControl(LRBNR_LEFT_LED1,WHITE_ON);
+			LEDControl(LFBNR_LEFT_LED0,WHITE_ON);
+			LEDControl(LFBNR_LEFT_LED1,WHITE_ON);
+			LEDControl(RRBNR_RIGHT_LED0,WHITE_ON);
+			LEDControl(RRBNR_RIGHT_LED1,WHITE_ON);
+			LEDControl(RFBNR_RIGHT_LED0,WHITE_ON);
+			LEDControl(RFBNR_RIGHT_LED1,WHITE_ON);
+		
+		
+		
+			LEDControl(LOCK_LED,WHITE_ON);
+			LEDControl(PAUSE_LED,WHITE_ON);
+			LEDControl(TIMER_LED,WHITE_ON);
+			LEDControl(BOOST_LED,WHITE_ON);
+		
+		
+			LEDControl(AUTOPOT_LED,WHITE_ON);
+			LEDControl(TIMER_PLUS_LED,WHITE_ON);
+			LEDControl(TIMER_MINUS_LED,WHITE_ON);
+		
+			LEDControl(PL_0_LED,WHITE_ON);
+			LEDControl(PL_1_LED,WHITE_ON);
+			LEDControl(PL_2_LED,WHITE_ON);
+			LEDControl(PL_3_LED,WHITE_ON);
+			LEDControl(PL_4_LED,WHITE_ON);
+			LEDControl(PL_5_LED,WHITE_ON);
+			LEDControl(PL_6_LED,WHITE_ON);
+			LEDControl(PL_7_LED,WHITE_ON);
+			LEDControl(PL_8_LED,WHITE_ON);
+			LEDControl(PL_9_LED,WHITE_ON);
+	}
+	else if(ucStep == 5)
+	{
+		ucStep = 0;
+		ucBP = SET;
+	}
+	return ucBP;
+}
+
 
 void RUN_STATE(void)
 {
 	static UINT8 suc1mscnt = 0;
 	static UINT8 suc100mscnt = 0;
+	static UINT8 suc100mscnt2_500 = 0;
+	static UINT8 sucWelDistep = 0;
+	UINT8 ucBreakPoint = 0;
+	
+	while(1)
+	{
+		if(guc1msFlag == SET)
+		{
+			LEDCOMControl();
+			
+			ucBreakPoint = WelcomeDisplay(sucWelDistep);
+		}
+		if(guc100msFlag == SET)
+		{
+				guc100msFlag = CLR;
+				suc100mscnt2_500++;
+		}
+		else
+		{
+			;
+		}
+		if(suc100mscnt2_500 == 5)
+		{
+			suc100mscnt2_500 = 0;
+			sucWelDistep++;
+		}
+		else
+		{
+			;
+		}
+		if(ucBreakPoint == SET) 
+		{
+			sucWelDistep = 0;
+			break;
+		}
+	}
+	
 	
 	while(1)
 	{
